@@ -4,6 +4,9 @@
  * @Author: Erik Williamson
  * @version: 1
  * <p>
+ * To run the calculation, either pass the  edit the hardcoded file path
+ * `FILE_NAME` variable in `Main.java`, or pass the file path as an argument.
+ * <p>
  * I estimate that a camping trip to a higher elevation / radiation zone was taken
  * from 5/31/2019 - 6/1/2019. I think this is the case because this date range
  * has the highest frequency of radiation counts within 5 of the maximum count

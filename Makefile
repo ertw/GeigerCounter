@@ -8,5 +8,6 @@ $(BUILD_MARKER):
 
 clean:
 	rm $(BUILD_MARKER)
+	rm GeigerCounter-jar-with-dependencies.jar
 
 all: clean build
