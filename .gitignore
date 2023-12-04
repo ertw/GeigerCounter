@@ -3,6 +3,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 .build_complete
+*.jar
 
 ### IntelliJ IDEA ###
 .idea/
