@@ -21,6 +21,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -62,7 +63,7 @@ public class Main {
         final String fileName = args.length > 0 ? args[0] : FILE_NAME;
         final LinkedList<RadiationSample> radiationSamples = parseRadiationSamples(fileName);
         radiationSamples.sort(Main::compareRadiationSamplesByDateTime);
-        RadiationSample maxCount = radiationSamples.stream().max((a, b) -> a.getCountsPerMinute() - b.getCountsPerMinute()).orElse(null);
+        RadiationSample maxCount = radiationSamples.stream().max(Comparator.comparingInt(RadiationSample::getCountsPerMinute)).orElse(null);
         System.out.printf("%-12s%-10s%n", "Date", "Counts per minute");
         System.out.printf("%-12s%-10s%n", "----------  ", "-----------------");
         if (maxCount != null) {
