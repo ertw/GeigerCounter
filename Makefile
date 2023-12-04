@@ -1,13 +1,10 @@
-.PHONY: build clean
-BUILD_MARKER=.build_complete
+APPLICATION=GeigerCounter-jar-with-dependencies.jar
 
-build: $(BUILD_MARKER)
-$(BUILD_MARKER):
+build: $(APPLICATION)
+$(APPLICATION):
 	mvn clean compile assembly:single
-	@touch $(BUILD_MARKER)
 
 clean:
-	rm $(BUILD_MARKER)
-	rm GeigerCounter-jar-with-dependencies.jar
+	rm -f $(APPLICATION)
 
 all: clean build
