@@ -1,3 +1,18 @@
+/**
+ * Parses and outputs radiation samples from a file.
+ *
+ * @Author: Erik Williamson
+ * @version: 1
+ * <p>
+ * I estimate that a camping trip to a higher elevation / radiation zone was taken
+ * from 5/31/2019 - 6/1/2019. I think this is the case because this date range
+ * has the highest frequency of radiation counts within 5 of the maximum count
+ * (which I found to be 38).
+ * <p>
+ * I initially sorted my output by count, but this wasn't too useful for
+ * finding the date range. I then sorted by date, which made it easy to find.
+ */
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
